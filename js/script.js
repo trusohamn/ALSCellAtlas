@@ -34,7 +34,9 @@ function setBootstrap() {
   const p =
     spec == "Human"
       ? `https://storage.googleapis.com/alsbootstrap/bootDists_LOG_thresh250__dir${el2}___Human ALS Spinal____${el1}.png`
-      : `https://storage.googleapis.com/alsbootstrap/bootDists_LOG_thresh250__dir${el2}___${el3}days_MOUSE____${el1}.png`;
+      : spec == "SOD1"
+      ? `https://storage.googleapis.com/alsbootstrap/bootDists_LOG_thresh250__dir${el2}___${el3}days_MOUSE____${el1}.png`
+      : `https://storage.googleapis.com/alsbootstrap/bootDists_LOG_thresh250__dir${el2}__TDP43_${el3}M_${el1}.png`;
   img.src = p;
   return p;
 }
@@ -51,11 +53,12 @@ function setGene(e) {
 function getGeneNames() {
   const dataList = document.querySelector("#json-datalist");
   let geneOptions = "";
-  const url =  "https://raw.githubusercontent.com/trusohamn/trusohamn.github.io/master/demo/data/geneNames.json";
+  const url =
+    "https://raw.githubusercontent.com/trusohamn/trusohamn.github.io/master/demo/data/geneNames.json";
   fetch(url)
-    .then(res => res.json())
-    .then(data => {
-      data.forEach(gene => {
+    .then((res) => res.json())
+    .then((data) => {
+      data.forEach((gene) => {
         geneOptions += `<option value="${gene}">`;
       });
       dataList.innerHTML = geneOptions;
@@ -71,7 +74,9 @@ window.onload = () => {
     timepoint.innerHTML =
       species.value === "Human"
         ? "<option disabled selected  value='' >postmortem</option>"
-        : "<option selected value = '28' >28 days</option><option value = '42'>42 days</option><option value = '56'>56 days</option>	<option value = '70'>70 days</option><option value = '98' >98 days</option><option value = '112'  >112 days</option><option value = '126' >126 days</option>";
+        : species.value === "SOD1"
+        ? "<option selected value = '28' >28 days</option><option value = '42'>42 days</option><option value = '56'>56 days</option>	<option value = '70'>70 days</option><option value = '98' >98 days</option><option value = '112'  >112 days</option><option value = '126' >126 days</option>"
+        : "<option selected value = '5' >5 months</option><option value = '20'>20 months</option>";
   };
   species.addEventListener("change", changeHandler);
 
