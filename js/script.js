@@ -45,7 +45,7 @@ function setGene(e) {
   e && e.preventDefault();
   const img = document.getElementById("imgGene");
   const geneName = document.getElementById("gene").value.toLowerCase();
-  const p = `https://storage.googleapis.com/alscell/${geneName}.png`;
+  const p = `https://storage.googleapis.com/alscell/png/${geneName}.png`;
   img.src = p;
   return p;
 }
