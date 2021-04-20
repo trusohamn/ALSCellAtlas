@@ -2,10 +2,7 @@
 <html lang="en">
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-160618510-1"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160618510-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -25,27 +22,15 @@
       name="keywords"
       content="Amyotrophic lateral sclerosis, ALS, ALS research, ALS treatments, presymptomatic ALS, Stephen Hawking disease, Lou Gehrig's disease, stages of ALS, ALS life expectancy, ALS very early symptoms, ALS progression, ALS origins, ALS prognosis, ALS survival, ALS cell atlas, perivascular fibroblast, perivascular space, enlarged perivascular space, EPVS, SOD1 G93A, TDP-43, TARDBP Q331K, Frontotemporal dementia, FTD, motor neuron disease, motoneuron disease, MND, Karolinska, Center for molecular medicine, CMM, Sebastian Lewandowski"
     />
-    <title>
-      ALS cell atlas, resource for cell activity and gene expression in mouse
-      and human ALS tissue.
-    </title>
+    <title>ALS cell atlas, resource for cell activity and gene expression in mouse and human ALS tissue.</title>
     <meta
       name="description"
       content="This resource helps you identify genes expressed during early and late ALS disease stages. You can explore the timeline of cell activity in early and late stages of ALS progression in SOD1 G93A and TARDBP Q331K mouse models and in end-stage sporadic ALS patients. You can also find individual gene expression and it's specificity within ten cell types in spinal cord tissue: Excitatory neurons, Interneurons, Microglia, Astrocytes, Oligodendrocytes, Oligodendrocyte progenitors, Endothelial cells, Pericytes, vascular smooth muscle, perivascular fibroblasts. "
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./js/script.js"></script>
 
     <link rel="stylesheet" href="css/main.css" />
@@ -59,31 +44,14 @@
         </div>
 
         <div>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-item nav-link" href="#">Home</a>
-              <a
-                class="nav-item nav-link"
-                href="https://storage.cloud.google.com/alsbootstrap/ALSCellAtlas_interface.pdf"
-                >Tutorial</a
-              >
-              <a
-                class="nav-item nav-link"
-                href="mailto:sebastian.lewandowski@ki.se?Subject=ALS%20Atlas"
-                target="_top"
-                >Contact</a
-              >
+              <a class="nav-item nav-link" href="https://storage.cloud.google.com/alsbootstrap/ALSCellAtlas_interface.pdf">Tutorial</a>
+              <a class="nav-item nav-link" href="mailto:sebastian.lewandowski@ki.se?Subject=ALS%20Atlas" target="_top">Contact</a>
             </div>
           </div>
         </div>
@@ -94,11 +62,7 @@
         <div class="choice">
           <label class="control-label">Species</label>
           <div class="controls inline-inputs">
-            <select
-              class="form-control form-control-sm"
-              id="Species"
-              onchange="setZScore()"
-            >
+            <select class="form-control form-control-sm" id="Species" onchange="setZScore()">
               <option value="SOD1" selected>Mouse SOD1</option>
               <option value="TDP43">Mouse TARDBP</option>
               <option value="Human">Human sALS</option>
@@ -108,11 +72,7 @@
         <div class="choice">
           <label class="control-label">Cell Type</label>
           <div class="controls inline-inputs">
-            <select
-              class="form-control form-control-sm"
-              id="CellType"
-              onchange="setZScore()"
-            >
+            <select class="form-control form-control-sm" id="CellType" onchange="setZScore()">
               <option value="VLMC">PVF</option>
               <option value="vSMC">vSMC</option>
               <option value="Endothelial">Endothelium</option>
@@ -129,11 +89,7 @@
         <div class="choice">
           <label class="control-label">Direction</label>
           <div class="controls inline-inputs">
-            <select
-              class="form-control form-control-sm"
-              id="Direction"
-              onchange="setZScore()"
-            >
+            <select class="form-control form-control-sm" id="Direction" onchange="setZScore()">
               <option value="UP" selected>Up</option>
               <option value="DOWN">Down</option>
             </select>
@@ -148,53 +104,25 @@
           </div>
         </div>
         <div class="bottom choice">
-          <button
-            id="fetch-btn"
-            class="btn btn-gray"
-            type="submit"
-            onclick="setBootstrap()"
-          >
-            Fetch gene ranking
-          </button>
+          <button id="fetch-btn" class="btn btn-gray" type="submit" onclick="setBootstrap()">Fetch gene ranking</button>
         </div>
       </div>
 
       <div id="zscore">
-        <img
-          id="img1"
-          src="https://storage.googleapis.com/alsbootstrap/zsore/SOD1%20OPC%20UP.svg"
-          title="a zscore plot"
-          onload="this.onload=null; this.src=setZScore();"
-        />
+        <img id="img1" src="https://storage.googleapis.com/alsbootstrap/zsore/SOD1%20OPC%20UP.svg" title="a zscore plot" onload="this.onload=null; this.src=setZScore();" />
       </div>
 
       <div id="bootstrap" class="scrollable">
-        <img
-          id="img2"
-          src=""
-          title="a bootstrap plot"
-          onload="this.onload=null; this.src=setBootstrap();"
-        />
+        <img id="img2" src="" title="a bootstrap plot" onload="this.onload=null; this.src=setBootstrap();" />
       </div>
 
       <form id="geneForm" class="row" onsubmit="setGene(event)">
         <div class="col-lg-6">
           <div class="input-group mb-3">
-            <input
-              type="text"
-              id="gene"
-              list="json-datalist"
-              class="form-control"
-              placeholder="gene name"
-              value="Gfap"
-              aria-label="Recipient's username"
-              aria-describedby="showGene"
-            />
+            <input type="text" id="gene" list="json-datalist" class="form-control" placeholder="gene name" value="Gfap" aria-label="Recipient's username" aria-describedby="showGene" />
             <datalist id="json-datalist"></datalist>
             <div class="input-group-append">
-              <button id="showGene" class="btn btn-gray" type="submit">
-                Show gene
-              </button>
+              <button id="showGene" class="btn btn-gray" type="submit">Show gene</button>
             </div>
           </div>
         </div>
@@ -210,9 +138,7 @@
             <ul class="list-unstyled">
               <li>Contact corresponding author:</li>
               <li>
-                <a href="mailto:sebastian.lewandowski@ki.se"
-                  >sebastian.lewandowski@ki.se</a
-                >
+                <a href="mailto:sebastian.lewandowski@ki.se">sebastian.lewandowski@ki.se</a>
               </li>
               <li>
                 <a href="https://twitter.com/@lewandowskiSA">@lewandowskiSA</a>
@@ -222,16 +148,11 @@
           <div>
             <p class="text">
               This page contains additional data supporting our manuscript:<br />
-              <strong>
-                Altered perivascular fibroblast activity precedes ALS disease
-                onset
-              </strong>
+              <strong> Altered perivascular fibroblast activity precedes ALS disease onset </strong>
             </p>
             <p>
               Published in
-              <a href=" https://dx.doi.org/10.1038/s41591-021-01295-9"
-                >Nature Medicine
-              </a>
+              <a href=" https://dx.doi.org/10.1038/s41591-021-01295-9">Nature Medicine </a>
               (2021)
             </p>
           </div>
@@ -239,23 +160,13 @@
         <div>
           <div class="small">
             <p>
-              We provide this resource and data freely for academic and other
-              non-commercial purposes. We support reproduction of data excerpts
-              from the database in academic publications on the condition that
-              it is cited with reference to the original publication (above) and
-              the database website
+              We provide this resource and data freely for academic and other non-commercial purposes. We support reproduction of data excerpts from the database in academic publications on the condition that it is cited with reference to the original publication (above) and the database website
               <a href="https://alscellatlas.org/">https://alscellatlas.org/</a>
             </p>
           </div>
           <div class="small">
             Links to EWCE code and resources:
-            <a href="https://github.com/NathanSkene/ALS_Human_EWCE">Human</a>,
-            <a href="https://github.com/NathanSkene/ALS_Mouse_EWCE"
-              >Mouse-SOD1</a
-            >,
-            <a href="https://github.com/szczepinskaa/ALS_TDP-43.git"
-              >Mouse TARDBP</a
-            ><br /><br />
+            <a href="https://github.com/NathanSkene/ALS_Human_EWCE">Human</a>, <a href="https://github.com/NathanSkene/ALS_Mouse_EWCE">Mouse-SOD1</a>, <a href="https://github.com/szczepinskaa/ALS_TDP-43.git">Mouse TARDBP</a><br /><br />
           </div>
         </div>
       </footer>
